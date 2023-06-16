@@ -35,6 +35,7 @@ FAST2SMS_API_KEY = 'YX9TfQk4yRNqk78SRiLWLDF3LIUMcTMshWZOlCjLAYVTSrHUc1n0SD8EtWjU
 @app.route('/', methods=['GET'])
 def api_check():
     return "api work"
+    
 @app.route('/send_otp', methods=['POST'])
 def send_otp():
     phone_number = request.form.get('phone_number')
@@ -95,4 +96,4 @@ def verify_otp():
             return jsonify({'message': 'Invalid OTP.'}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run()
