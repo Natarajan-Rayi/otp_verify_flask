@@ -96,4 +96,4 @@ def verify_otp():
             return jsonify({'message': 'Invalid OTP.'}), 400
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=False)
